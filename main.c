@@ -17,7 +17,7 @@ int main (int argc, const char * argv[]){
 	float media1,media2,media3,media4;
 	printf("Numero: %d \n", n);
 
-	for (i=0;i<3000000;i++){	
+	for (i=0;i<30;i++){	
 	
 		inicial1 = clock();		
 		int primo1 = TestaPrimo1(n);			
@@ -68,7 +68,7 @@ int main (int argc, const char * argv[]){
 	return 0;
 }
 int TestaPrimo1(int n) {
-    int EhPrimo = 1, //em princípio, n é primo
+    int EhPrimo = 1, //em princÃ­pio, n Ã© primo
         d=2;
     if (n <= 1)
     EhPrimo = 0;
@@ -84,7 +84,7 @@ int TestaPrimo1(int n) {
 
 int TestaPrimo2(int n) {
     
-    int EhPrimo = 1, //em princípio, n é primo
+    int EhPrimo = 1, //em princÃ­pio, n Ã© primo
         d=2,
         resto;
     if (n <= 1)
@@ -111,14 +111,14 @@ int TestaPrimo3(int n) {
     while (EhPrimo  && d <= n / 2) {
         if (n % d == 0)
             EhPrimo = 0;
-        d = d + 2;        /* testar apenas ímpares*/
+        d = d + 2;        /* testar apenas Ã­mpares*/
     }
     return EhPrimo;
 }
 
 
 int TestaPrimo4(int n) {
-    int EhPrimo, //em princípio, n é primo
+    int EhPrimo, //em princÃ­pio, n Ã© primo
         d=3;
     if (n <= 1 || (n != 2 && n % 6 == 1 && n % 6 == 5))
         EhPrimo = 0;    /* nenhum numero inteiro <= 1 ou ~ adjacente a 6 eh primo */
